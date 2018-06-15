@@ -131,6 +131,7 @@ describe('Lexicon E2E Editor List and Entry', () => {
     util.setCheckbox(configPage.unifiedPane.hiddenIfEmptyCheckbox('Pictures'), false);
     configPage.unifiedPane.fieldSpecificButton('Pictures').click();
     util.setCheckbox(configPage.unifiedPane.fieldSpecificCaptionHiddenIfEmptyCheckbox('Pictures'), true);
+    Utils.scrollTop();
     configPage.applyButton.click();
   });
 
@@ -149,6 +150,7 @@ describe('Lexicon E2E Editor List and Entry', () => {
     util.setCheckbox(configPage.unifiedPane.hiddenIfEmptyCheckbox('Pictures'), false);
     configPage.unifiedPane.fieldSpecificButton('Pictures').click();
     util.setCheckbox(configPage.unifiedPane.fieldSpecificCaptionHiddenIfEmptyCheckbox('Pictures'), false);
+    Utils.scrollTop();
     configPage.applyButton.click();
   });
 
@@ -172,6 +174,7 @@ describe('Lexicon E2E Editor List and Entry', () => {
     util.setCheckbox(configPage.unifiedPane.hiddenIfEmptyCheckbox('Pictures'), true);
     configPage.unifiedPane.fieldSpecificButton('Pictures').click();
     util.setCheckbox(configPage.unifiedPane.fieldSpecificCaptionHiddenIfEmptyCheckbox('Pictures'), true);
+    Utils.scrollTop();
     configPage.applyButton.click();
   });
 

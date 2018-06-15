@@ -129,6 +129,7 @@ describe('Lexicon E2E Configuration Fields', () => {
     });
 
     it('check first entry for changed field order', () => {
+      Utils.scrollTop();
       expect<any>(configPage.applyButton.isEnabled()).toBe(true);
       configPage.applyButton.click();
       expect<any>(configPage.applyButton.isEnabled()).toBe(false);
@@ -472,6 +473,7 @@ describe('Lexicon E2E Configuration Fields', () => {
   describe('Select All for Rows', () => {
 
     it('can fully function "Select All" along an Input System row', () => {
+      Utils.scrollTop();
       const rowLabel = new RegExp('^Thai$');
       expect<any>(configPage.unifiedPane.rowCheckboxes(rowLabel).count()).toEqual(5);
       util.setCheckbox(configPage.unifiedPane.commenterCheckbox(rowLabel), true);
@@ -557,6 +559,7 @@ describe('Lexicon E2E Configuration Fields', () => {
 
     it('can add a member-specific user settings', () => {
       expect<any>(configPage.unifiedPane.inputSystem.selectAll.groups().count()).toEqual(0);
+      Utils.scrollTop();
       configPage.unifiedPane.entry.addGroupButton.click();
       expect<any>(configPage.unifiedPane.addGroupModal.usernameTypeaheadInput.isDisplayed()).toBe(true);
       expect<any>(configPage.unifiedPane.addGroupModal.usernameTypeaheadResults.count()).toEqual(0);

@@ -7,6 +7,7 @@ import {ConfigurationPage} from './lexicon/shared/configuration.page';
 import {EditorPage} from './lexicon/shared/editor.page';
 import {NewLexProjectPage} from './lexicon/shared/new-lex-project.page';
 import {ProjectSettingsPage} from './lexicon/shared/project-settings.page';
+import {Utils} from '../bellows/shared/utils';
 
 describe('Lexicon E2E Page Traversal', () => {
   const constants = require('../testConstants.json');
@@ -71,6 +72,7 @@ describe('Lexicon E2E Page Traversal', () => {
     });
 
     it('Input Systems tab', () => {
+      Utils.scrollTop();
       configurationPage.tabs.inputSystems.click();
       configurationPage.inputSystemsPane.moreButton.click();
     });
