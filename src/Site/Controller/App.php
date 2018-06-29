@@ -94,6 +94,7 @@ class App extends Base
         }
 
         $this->addCssFiles(NG_BASE_FOLDER . 'bellows/directive');
+        $this->addCssFiles(NG_BASE_FOLDER . 'bellows/shared');
         $this->addCssFiles($appModel->appFolder, ['node_modules']);
 
         $this->addSemanticDomainFile($app, $appModel, $projectId);
